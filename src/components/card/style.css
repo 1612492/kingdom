@@ -1,0 +1,36 @@
+.card {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__img {
+  width: 180px;
+}
+
+.card__character {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-character__img {
+  width: 150px;
+}
+
+.card__checked {
+  position: absolute;
+  width: 50px;
+  right: 14px;
+  bottom: 18px;
+}

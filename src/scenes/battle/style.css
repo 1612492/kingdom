@@ -1,0 +1,23 @@
+.battle-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  column-gap: 5rem;
+  background-image: url('images/bg_battle_3.png');
+  background-size: cover;
+}
+
+.left-side {
+  margin-top: 250px;
+  width: 50%;
+}
+
+.right-side {
+  margin-top: 250px;
+  width: 50%;
+  transform: scaleX(-1);
+}
+
+.battle-scene__character {
+  width: 100px;
+}

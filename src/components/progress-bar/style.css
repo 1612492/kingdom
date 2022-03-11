@@ -1,0 +1,23 @@
+.progress {
+  text-align: center;
+}
+
+.progress__bar {
+  margin-bottom: 0.5rem;
+  width: 600px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #d1d5db;
+  overflow: hidden;
+}
+
+.progress__active-bar {
+  height: 100%;
+  background-color: #ea580c;
+  transition: width .5s;
+}
+
+.progress__percentage {
+  font-size: 2rem;
+  font-weight: 700;
+}
