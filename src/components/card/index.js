@@ -15,11 +15,11 @@ const characterImgs = {
 function Card({ character, isSelected, onClick }) {
   return (
     <button onClick={onClick} className="card">
-      <img src={imgCard} atl="card" className="card__img" />
+      <img src={imgCard} alt="card" className="card__img" />
       <div className="card__character">
         <img src={characterImgs[character]} alt="character" className="card-character__img" />
       </div>
-      {isSelected ? <img src={iconCheck} atl="checked" className="card__checked" /> : null}
+      {isSelected ? <img src={iconCheck} alt="checked" className="card__checked" /> : null}
     </button>
   );
 }

@@ -13,12 +13,13 @@
   width: 500px;
 }
 
-.btn-start {
+.menu-scene__btn {
   margin-top: 4rem;
-  width: 300px;
+  padding: 0 4rem;
+  min-width: 300px;
   height: 60px;
   border-radius: 30px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
   cursor: pointer;
@@ -30,6 +31,6 @@
   transition-duration: 150ms;
 }
 
-.btn-start:hover {
+.menu-scene__btn:hover {
   background-color: #f97316;
 }

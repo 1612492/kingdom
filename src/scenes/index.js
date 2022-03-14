@@ -9,6 +9,7 @@ import {
   ERROR_SCENE,
 } from 'constants/scenes';
 import useScene from 'hooks/useScene';
+import useWeb3Listener from 'hooks/useWeb3Listener';
 import BootScene from 'scenes/boot';
 import MenuScene from 'scenes/menu';
 import PrepairScene from 'scenes/prepair';
@@ -27,9 +28,11 @@ const scenes = {
   [ERROR_SCENE]: ErrorScene,
 };
 
-function App() {
+function Scenes() {
   const scene = useScene((state) => state.scene);
   const Scene = scenes[scene];
+
+  useWeb3Listener();
 
   return (
     <div className="app">
@@ -38,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Scenes;
