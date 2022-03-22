@@ -1,6 +1,6 @@
 import './style.css';
 
-import { MENU_SCENE } from 'constants/scenes';
+import { MENU_SCENE } from 'constants/scene';
 import ProgressBar from 'components/progress-bar';
 import useScene from 'hooks/useScene';
 

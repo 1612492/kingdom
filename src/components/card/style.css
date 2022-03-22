@@ -16,7 +16,7 @@
   width: 180px;
 }
 
-.card__character {
+.card__hero {
   position: absolute;
   inset: 0;
   display: flex;
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.card-character__img {
+.card-hero__img {
   width: 150px;
 }
 

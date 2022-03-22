@@ -7,7 +7,7 @@ import {
   RESULT_SCENE,
   LOADING_SCENE,
   ERROR_SCENE,
-} from 'constants/scenes';
+} from 'constants/scene';
 import useScene from 'hooks/useScene';
 import useWeb3Listener from 'hooks/useWeb3Listener';
 import BootScene from 'scenes/boot';

@@ -1,5 +1,5 @@
 import './style.css';
-import { PREPAIR_SCENE } from 'constants/scenes';
+import { PREPAIR_SCENE } from 'constants/scene';
 import useScene from 'hooks/useScene';
 import useWeb3 from 'hooks/useWeb3';
 import logo from 'images/logo.png';

@@ -48,3 +48,10 @@ export function sign(account) {
     params: [account, hash],
   });
 }
+
+export function getCollection({ account }) {
+  let contractAddress, abi;
+  const contract = new ethers.Contract(contractAddress, abi, window.ethereum);
+
+  return contract.getCollections(account);
+}

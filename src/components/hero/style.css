@@ -1,0 +1,275 @@
+.hero {
+  display: inline-block;
+}
+
+.hero__hp {
+  margin: auto;
+  width: 50px;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+}
+
+.hero__remain-hp {
+  height: 100%;
+  background-color: #16a34a;
+  transition-property: width;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+}
+
+.hero__body {
+  display: inline-block;
+  position: relative;
+  width: 94px;
+  height: 76px;
+}
+
+.hero-idle {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+}
+
+.hero-idle--golem1 {
+  background-image: url('images/hero/golem1_attack.png');
+}
+
+.hero-idle--golem2 {
+  background-image: url('images/hero/golem2_attack.png');
+}
+
+.hero-idle--golem3 {
+  background-image: url('images/hero/golem3_attack.png');
+}
+
+.hero-idle--satyr1 {
+  background-image: url('images/hero/satyr1_attack.png');
+}
+
+.hero-idle--satyr2 {
+  background-image: url('images/hero/satyr2_attack.png');
+}
+
+.hero-idle--satyr3 {
+  background-image: url('images/hero/satyr3_attack.png');
+}
+
+.hero-idle--minotaur1 {
+  background-image: url('images/hero/minotaur1_attack.png');
+}
+
+.hero-idle--minotaur2 {
+  background-image: url('images/hero/minotaur2_attack.png');
+}
+
+.hero-idle--minotaur3 {
+  background-image: url('images/hero/minotaur3_attack.png');
+}
+
+.hero-idle--wraith1 {
+  background-image: url('images/hero/wraith1_attack.png');
+}
+
+.hero-idle--wraith2 {
+  background-image: url('images/hero/wraith2_attack.png');
+}
+
+.hero-idle--wraith3 {
+  background-image: url('images/hero/wraith3_attack.png');
+}
+
+.hero-attack {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+
+  animation: 0.5s attack steps(12);
+}
+
+@keyframes attack {
+  from {
+    background-position: 1200px;
+  }
+}
+
+.hero-attack--golem1 {
+  background-image: url('images/hero/golem1_attack.png');
+}
+
+.hero-attack--golem2 {
+  background-image: url('images/hero/golem2_attack.png');
+}
+
+.hero-attack--golem3 {
+  background-image: url('images/hero/golem3_attack.png');
+}
+
+.hero-attack--satyr1 {
+  background-image: url('images/hero/satyr1_attack.png');
+}
+
+.hero-attack--satyr2 {
+  background-image: url('images/hero/satyr2_attack.png');
+}
+
+.hero-attack--satyr3 {
+  background-image: url('images/hero/satyr3_attack.png');
+}
+
+.hero-attack--minotaur1 {
+  background-image: url('images/hero/minotaur1_attack.png');
+}
+
+.hero-attack--minotaur2 {
+  background-image: url('images/hero/minotaur2_attack.png');
+}
+
+.hero-attack--minotaur3 {
+  background-image: url('images/hero/minotaur3_attack.png');
+}
+
+.hero-attack--wraith1 {
+  background-image: url('images/hero/wraith1_attack.png');
+}
+
+.hero-attack--wraith2 {
+  background-image: url('images/hero/wraith2_attack.png');
+}
+
+.hero-attack--wraith3 {
+  background-image: url('images/hero/wraith3_attack.png');
+}
+
+.hero-die {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+
+  animation: 0.5s die 1s steps(12) forwards;
+}
+
+@keyframes die {
+  from {
+    background-position: 1200px;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.hero-die--golem1 {
+  background-image: url('images/hero/golem1_die.png');
+}
+
+.hero-die--golem2 {
+  background-image: url('images/hero/golem2_die.png');
+}
+
+.hero-die--golem3 {
+  background-image: url('images/hero/golem3_die.png');
+}
+
+.hero-die--satyr1 {
+  background-image: url('images/hero/satyr1_die.png');
+}
+
+.hero-die--satyr2 {
+  background-image: url('images/hero/satyr2_die.png');
+}
+
+.hero-die--satyr3 {
+  background-image: url('images/hero/satyr3_die.png');
+}
+
+.hero-die--minotaur1 {
+  background-image: url('images/hero/minotaur1_die.png');
+}
+
+.hero-die--minotaur2 {
+  background-image: url('images/hero/minotaur2_die.png');
+}
+
+.hero-die--minotaur3 {
+  background-image: url('images/hero/minotaur3_die.png');
+}
+
+.hero-die--wraith1 {
+  background-image: url('images/hero/wraith1_die.png');
+}
+
+.hero-die--wraith2 {
+  background-image: url('images/hero/wraith2_die.png');
+}
+
+.hero-die--wraith3 {
+  background-image: url('images/hero/wraith3_die.png');
+}
+
+.hero-hurt {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+
+  animation: 0.5s hurt 0.5s steps(12) forwards;
+}
+
+@keyframes hurt {
+  to {
+    background-position: 1200px;
+  }
+}
+
+.hero-hurt--golem1 {
+  background-image: url('images/hero/golem1_hurt.png');
+}
+
+.hero-hurt--golem2 {
+  background-image: url('images/hero/golem2_hurt.png');
+}
+
+.hero-hurt--golem3 {
+  background-image: url('images/hero/golem3_hurt.png');
+}
+
+.hero-hurt--satyr1 {
+  background-image: url('images/hero/satyr1_hurt.png');
+}
+
+.hero-hurt--satyr2 {
+  background-image: url('images/hero/satyr2_hurt.png');
+}
+
+.hero-hurt--satyr3 {
+  background-image: url('images/hero/satyr3_hurt.png');
+}
+
+.hero-hurt--minotaur1 {
+  background-image: url('images/hero/minotaur1_hurt.png');
+}
+
+.hero-hurt--minotaur2 {
+  background-image: url('images/hero/minotaur2_hurt.png');
+}
+
+.hero-hurt--minotaur3 {
+  background-image: url('images/hero/minotaur3_hurt.png');
+}
+
+.hero-hurt--wraith1 {
+  background-image: url('images/hero/wraith1_hurt.png');
+}
+
+.hero-hurt--wraith2 {
+  background-image: url('images/hero/wraith2_hurt.png');
+}
+
+.hero-hurt--wraith3 {
+  background-image: url('images/hero/wraith3_hurt.png');
+}

@@ -1,44 +1,64 @@
+import { useCallback } from 'react';
 import './style.css';
-import { ARCHER, WARRIOR, BARBARIAN } from 'constants/characters';
-import imgArcher from 'images/archer.png';
-import imgWarrior from 'images/warrior.png';
-import imgBarbarian from 'images/barbarian.png';
-import useTeam from 'hooks/useTeam';
-
-const characterImgs = {
-  [ARCHER]: imgArcher,
-  [WARRIOR]: imgWarrior,
-  [BARBARIAN]: imgBarbarian,
-};
+import { status } from 'constants/hero';
+import Hero from 'components/hero';
+import useBattle from 'hooks/useBattle';
 
 function BattleScene() {
-  const team = useTeam((state) => state.team);
+  const { initialHeroes, playerTeam, opponentTeam, turnInfo, winner } = useBattle();
+
+  if (winner) {
+    console.log(winner);
+  }
+
+  const getStatus = useCallback(
+    ({ id, hp }) => {
+      if (hp === 0) {
+        return status.DIE;
+      }
+
+      if (turnInfo) {
+        if (turnInfo?.attack_hero_i === id) {
+          return status.ATTACK;
+        }
+
+        if (turnInfo?.take_damage_hero_id === id) {
+          return status.HURT;
+        }
+      }
+
+      return status.IDLE;
+    },
+    [turnInfo]
+  );
 
   return (
     <div className="battle-scene">
       <div className="left-side">
-        {team.map((_, index) => {
-          return (
-            <img
-              key={index}
-              src={characterImgs[index % 3]}
-              alt="character"
-              className="battle-scene__character"
-            />
-          );
-        })}
+        {playerTeam.map(({ id, name, attack, defend, hp }) => (
+          <Hero
+            key={id}
+            id={id}
+            name={name}
+            attack={attack}
+            defend={defend}
+            hpPercentage={`${(hp * 100) / initialHeroes[id].hp}%`}
+            status={getStatus({ id, hp })}
+          />
+        ))}
       </div>
       <div className="right-side">
-        {team.map((_, index) => {
-          return (
-            <img
-              key={index}
-              src={characterImgs[index % 3]}
-              alt="character"
-              className="battle-scene__character"
-            />
-          );
-        })}
+        {opponentTeam.map(({ id, name, attack, defend, hp }) => (
+          <Hero
+            key={id}
+            id={id}
+            name={name}
+            attack={attack}
+            defend={defend}
+            hpPercentage={`${(hp * 100) / initialHeroes[id].hp}%`}
+            status={getStatus({ id, hp })}
+          />
+        ))}
       </div>
     </div>
   );
