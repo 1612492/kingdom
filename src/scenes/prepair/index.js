@@ -36,7 +36,7 @@ const heroImages = {
 };
 
 function PrepairScene() {
-  const { team, add, remove } = useTeam();
+  const { team, add, remove, reset } = useTeam();
   const setScene = useScene((state) => state.setScene);
 
   return (
@@ -59,7 +59,10 @@ function PrepairScene() {
       <div className="prepair-scene__footer">
         <button
           disabled={team.length !== 5}
-          onClick={() => setScene(BATTE_SCENE)}
+          onClick={() => {
+            setScene(BATTE_SCENE);
+            reset();
+          }}
           className="btn-battle"
         >{`Let's battle`}</button>
       </div>
