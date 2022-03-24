@@ -1,9 +1,10 @@
 .battle-scene {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   column-gap: 5rem;
-  background-image: url('images/bg_battle_3.png');
+  background-image: url('images/bg_battle.png');
   background-size: cover;
 }
 
@@ -16,4 +17,37 @@
   margin-top: 250px;
   width: 50%;
   transform: scaleX(-1);
+}
+
+.battle-end {
+  position: absolute;
+  inset: 0;
+  background-color: #00000080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle-end__img {
+  display: block;
+  margin-top: 100px;
+  width: 400px;
+}
+
+.battle-end__button {
+  margin-top: 100px;
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #ea580c;
+}
+
+.battle-end__button:hover {
+  background-color: #f97316;
 }
