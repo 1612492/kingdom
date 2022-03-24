@@ -28,11 +28,13 @@ function useBattle() {
         setPlayerTeam(turn.team_one);
         setOpponentTeam(turn.team_two);
         setTurnInfo(turn.logs);
-        start++;
-      } else {
+      }
+
+      if (start === end + 1) {
         setWinner(data.info.winner);
         clearInterval(intervalId);
       }
+      start++;
     }, 1000);
 
     return () => clearInterval(intervalId);
